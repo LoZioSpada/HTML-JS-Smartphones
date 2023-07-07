@@ -16,5 +16,34 @@ function changeAddress(){
 
 // ESERCIZIO 10: Scrivi una funzione per aggiungere una classe CSS ad ogni link Amazon della tabella
 function newLink(){
-    document.querySelectorAll('a').className = 'newLink'
+    let tag = document.querySelectorAll('a')
+    for(i = 0; i < tag.length; i++){
+        tag[i].classList.add('nuovoLink')
+    }
+}
+
+// ESERCIZIO 11: Scrivi una funzione per aggiungere/togliere una classe CSS a tutte le immagini della tabella; questa classe deve modificare la visibilità/invisibilità dell'immagine
+function togliImmagine(){
+    let immagini = document.querySelectorAll('img')
+    for(i = 0; i < immagini.length; i++){
+        const immagineSingola = immagini[i]
+        immagineSingola.classList.toggle('hidden')
+    }
+}
+
+// ESERCIZIO 12: Scrivi una funzione per cambiare il colore del prezzo di ogni prodotto in uno differente, ogni volta che viene invocata
+function randomColor(){
+    const red = Math.round(Math.random() * 255)
+    const blue = Math.round(Math.random() * 255)
+    const green = Math.round(Math.random() * 255)
+    return 'rgb(' + red +', ' + green + ', ' + blue + ')'
+}
+
+function setRandomColor(){
+    let coloreRandom = randomColor()
+    let prezzi = document.querySelectorAll('.prezzo')
+    for (i = 0; i < prezzi.length; i++){
+        let prezzoSingolo = prezzi[i]
+        prezzoSingolo.style.color = coloreRandom
+    }
 }

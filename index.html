@@ -4,6 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Spada's Smartphones</title>  <!-- titolo della pagina sulla scheda del browser -->
+        <style>
+            .nuovoLink{
+                background-color: yellow;
+            }
+
+            .hidden{
+                visibility: hidden;
+            }  
+        </style>
     </head>
     <body>
         <header>
@@ -17,11 +26,11 @@
                 </caption>
                 <thead>     <!-- qui aggiungiamo le immagini degli smartphones -->
                     <tr>
-                        <td><img src="assets/img/s23.png" alt="s23" style="height: 300px; width: 300px;"></td>  <!-- Galaxy s23 -->
-                        <td><img src="assets/img/iphone.png" alt="iphone" style="height: 300px; width: 200px;"></td>    <!-- iPhone-->
-                        <td><img src="assets/img/xiaomi.png" alt="xiaomi" style="height: 300px; width: 200px;"></td>    <!-- Xiaomi  -->
-                        <td><img src="assets/img/oneplus.png" alt="oneplus" style="height: 300px; width: 200px;"></td>  <!-- OnePlus -->
-                        <td><img src="assets/img/pixel7.png" alt="pixel7" style="height: 300px; width: 200px;"></td>    <!-- Pixel 7 -->
+                        <td><img  src="assets/img/s23.png" alt="s23" style="height: 300px; width: 300px;"></td>  <!-- Galaxy s23 -->
+                        <td><img  src="assets/img/iphone.png" alt="iphone" style="height: 300px; width: 200px;"></td>    <!-- iPhone-->
+                        <td><img  src="assets/img/xiaomi.png" alt="xiaomi" style="height: 300px; width: 200px;"></td>    <!-- Xiaomi  -->
+                        <td><img  src="assets/img/oneplus.png" alt="oneplus" style="height: 300px; width: 200px;"></td>  <!-- OnePlus -->
+                        <td><img  src="assets/img/pixel7.png" alt="pixel7" style="height: 300px; width: 200px;"></td>    <!-- Pixel 7 -->
                     </tr>
                 </thead>
                 <tbody>     <!-- qui aggiungiamo i nomi degli smartphones -->
@@ -35,11 +44,11 @@
                 </tbody>
                 <tfoot>     <!-- qui aggiungiamo prezzo e descrizione -->
                     <tr>
-                        <td>Il migliore sul mercato!<br>Prezzo: 1.199,99 € </td>
-                        <td>Il meglio che puoi trovare sulla tua privacy!<br>Prezzo: 1.299,00 €</td>
-                        <td>Progettato per resistere e durare!<br>Prezzo: 1.198,94 €</td>
-                        <td>Splendidamente potente!<br>Prezzo: 859,90 €</td>
-                        <td>Il telefono Google migliore di sempre!<br>Prezzo: 829,00 €</td>
+                        <td>Il migliore sul mercato! <br> Prezzo: <span class="prezzo">1.199,99 €</span>  </td>
+                        <td>Il meglio che puoi trovare sulla tua privacy!<br>Prezzo: <span class="prezzo">1.299,00 €</span></td>
+                        <td>Progettato per resistere e durare!<br>Prezzo: <span class="prezzo">1.198,94 €</span></td>
+                        <td>Splendidamente potente!<br>Prezzo: <span class="prezzo">859,90 €</span></td>
+                        <td>Il telefono Google migliore di sempre!<br>Prezzo: <span class="prezzo">829,00 €</span></td>
                     </tr>
                 </tfoot>
             </table>
@@ -51,6 +60,7 @@
             <h5>Spada's Smartphones</h5>
             <div class="address">Via Washington 3, 89812 Pizzo Calabro (VV) </div>
             <p>P:IVA: 0123456789</p>
+            <button onclick="togliImmagine()">togli l'immagine</button>
         </footer>
     </body>
     <script src="assets/js/index.js"></script>
